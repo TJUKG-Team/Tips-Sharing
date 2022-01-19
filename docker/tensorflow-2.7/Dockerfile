@@ -10,7 +10,8 @@ RUN apt update \
     && rm -rf /var/cache/apt/
 RUN adduser --disabled-password --shell /bin/bash --uid 1000 --gecos '' user \
     && adduser user sudo \
-    && echo '%sudo ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers
+    && echo '%sudo ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers \
+    && echo 'export PATH=/home/user/.local/bin:$PATH' >> /home/user/.bashrc
 
 USER user
 WORKDIR /home/user
