@@ -13,4 +13,7 @@ setopt no_nomatch
 ## >>> aliases >>>
 alias ll="la"
 alias grep_v="grep -v grep | grep"
+alias show_size="du -sh * .[^.]* 2>/dev/null"
 ## <<< aliases <<<
+
+export PATH=/home/user/.local/bin:$PATH
