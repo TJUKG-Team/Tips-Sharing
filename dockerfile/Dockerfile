@@ -9,7 +9,7 @@ RUN ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime \
 
 # 安装sudo、zsh
 RUN apt update \
-    && apt install -y sudo zsh \
+    && apt install -y sudo zsh git \
     && rm -rf /var/lib/apt/lists/* \
     && rm -rf /var/cache/apt/
 
@@ -29,4 +29,4 @@ USER user
 WORKDIR /home/user
 CMD ["zsh"]
 
-LABEL Author="MinghuiZou" Description="ADD['sudo', 'account:user', 'zsh']"
+LABEL Author="MinghuiZou"
