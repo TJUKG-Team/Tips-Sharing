@@ -28,5 +28,6 @@ CMD ["zsh"]
 # 配置oh-my-zsh
 COPY assets/.zshrc /home/user
 ADD assets/.oh-my-zsh.tar /home/user
+RUN sudo chown -R user:user /home/user
 
 LABEL Author="MinghuiZou"
